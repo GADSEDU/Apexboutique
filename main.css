@@ -1,0 +1,335 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+   font-family: 'montserrat';   
+}
+
+nav {
+    background: #043961;
+    height: 80px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+label.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 50px;
+    font-weight: bold;
+}
+
+nav ul {
+    float: right;
+    margin-right: 40px;
+      
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color: white;
+    font-size: 15px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+a.active,a:hover{
+    background: #315875;
+    transition: .5s;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media (max-width: 952px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 85px){
+    .checkbtn{
+        display: block;        
+    }
+
+
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    a:hover,a.active{
+        background: none;
+        color: #0e3049;
+    } 
+    #check:checked ~ ul{
+        left: 0;
+    }
+    
+}
+
+
+hr {
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-bottom: 50px;
+    border-top: 5px solid lightgray;
+  }
+
+section {
+    color: #043961;
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+    text-shadow: 2px 2px #4393dd;
+    padding-top: 50px;
+    margin: 1em auto;
+    width: 70%;  
+} 
+
+.boo{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.foo {
+    color: #064779;
+    font-size: 25px;
+    text-align: center;
+    padding: 50px;
+    margin: 1em auto;    
+    text-shadow: 0;
+}
+
+#dev {
+    text-shadow: none;
+    font-size: 15px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+#dev a:hover{
+    background: none;
+    color: none;
+}
+
+.add{
+    font-size: 10px;
+    text-decoration: none;
+}
+
+h3{
+    color: #043961;
+    font-weight: bold; 
+}
+
+
+* {
+    box-sizing: border-box;
+ }
+
+.outer-grid {
+   display: flex;
+   flex-wrap: wrap;
+   padding: 0 4px;
+   font-family: 'montserrat';
+   font-weight: bold;
+   color: #043961;
+   text-align: center;
+}
+.inner-grid {
+   flex: 50%;
+   max-width: 50%;
+   max-height: 50%;
+   padding: 0 2px;
+}
+/* image size changes */
+.inner-grid img {
+   margin-top: 8px;
+   width: 100%;
+   height: 76%;
+   padding: 10px; 
+}
+
+
+/* ##Device = Desktops ##Screen = 1281px to higher resolution desktops*/ 
+@media (min-width: 1281px) {
+    .inner-grid {
+        flex: 100%;
+        max-width: 50%;
+     }
+} 
+
+/* ##Device = Laptops, Desktops ##Screen = B/w 1025px to 1280px*/
+ @media (min-width: 1025px) and (max-width: 1280px) {
+    .inner-grid {
+        flex: 100%;
+        max-width:50%;
+     }
+ } 
+
+/* ##Device = Tablets, Ipads (portrait) ##Screen = B/w 768px to 1024px*/
+@media (min-width: 768px) and (max-width: 1024px) {
+    .inner-grid {
+        flex: 100%;
+        max-width: 50%;
+     }
+}
+
+  /* ##Device = Tablets, Ipads (landscape) ##Screen = B/w 768px to 1024px*/ 
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .inner-grid {
+        flex: 100%;
+        max-width: 50%;
+     }
+} 
+  /* ##Device = Low Resolution Tablets, Mobiles (Landscape) ##Screen = B/w 481px to 767px*/ 
+@media (min-width: 481px) and (max-width: 767px) {
+    .inner-grid {
+        flex: 300%;
+        max-width: 950%;
+     }
+} 
+  /* ##Device = Most of the Smartphones Mobiles (Portrait) ##Screen = B/w 320px to 479px*/
+ @media (min-width: 320px) and (max-width: 480px) {
+    .inner-grid {
+        flex: 300%;
+        max-width: 950%;
+     }
+ }
+
+.image{
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    text-align: center;
+}
+
+.middle{
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 150%;
+    left: 150%;
+    transform: translate(-100%, -100%);
+    -ms-transform: translate(-100%, -100%);
+}
+
+.image:hover{
+    opacity: 0.3;
+}
+
+.middle:hover{
+    opacity: 1;
+}
+
+a.text{
+    background-color: #4CAF50;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 16px 32px;
+}
+
+#addr{
+    color: #0f0f55;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.ctn{
+    list-style-type: none;
+    padding: 0;
+    margin-left: 30px;
+    text-align: left;
+    display: inline-grid;
+    grid-template-columns: repeat(3, 25%);
+    width: 100%;
+}
+
+.ctn a:hover{
+    background: none;
+    color: none;
+}
+
+.ref{
+    padding: top 50px;
+    padding-bottom: 0px;
+    display: block;
+    color: #161144;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.span{   
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: #000;
+    display: inline-block;
+    text-align: center;
+    font-size: 100px;
+}
+
+#googleMap{
+    text-align: center; 
+    width: 95%;
+    height: 400px;
+    margin-bottom: 5px;
+    padding-top: 50px;
+    padding-right: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#mv{
+    padding-right: 50px;
+}
+
+
+
+.social {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
